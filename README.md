@@ -1,2 +1,2 @@
-# Ki-isel-Web-Sitem
+# Kisisel-Web-Sitem
 Kişisel Web Sitem
