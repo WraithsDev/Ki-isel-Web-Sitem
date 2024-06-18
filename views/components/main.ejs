@@ -1,0 +1,28 @@
+<div class="main">
+  <div class="conta">
+    <p class="text">Hello <img class="hello" src="/img/hello.png" alt=""> this is the</p>
+    <p class="text2">world of <span class="name"> Enes.</span></p>
+    <p class="text3">I am a Discord bot developer and content producer, my name is Enes. I live in Turkey and I am dealing with all kinds of projects.</p>
+  </div>
+</div>
+<br><br><br><br><br>
+<div class="discord-status">
+  <h2 style="text-align: center;">Discord Status</h2>
+  <% if (discordStatus) { %>
+    <div class="status-card">
+      <div class="avatar-container">
+        <img class="discord-avatar" src="<%= discordStatus.discord_user.avatar_url %>" alt="Discord Avatar">
+        <span class="status-indicator <%= discordStatus.discord_status %>"></span>
+      </div>
+      <p>Activities:</p>
+      <ul>
+        <% discordStatus.activities.forEach(activity => { %>
+          <li><%= activity.name %>: <%= activity.details %></li>
+          ㅤㅤㅤㅤㅤㅤㅤ
+        <% }) %>
+      </ul>
+    </div>
+  <% } else { %>
+    <p>Could not fetch Discord status.</p>
+  <% } %>
+</div>
